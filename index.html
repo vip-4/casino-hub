@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lucky 777 Casino Hub — 8 款免費開源 HTML5 博弈遊戲示範</title>
+  <meta name="description" content="Lucky 777 Casino Hub 將 8 款輕量級 HTML5 博弈遊戲整合於單一靜態首頁：老虎機、影像撲克、21 點、輪盤、百家樂、Plinko、擲硬幣與骰子。零第三方依賴、純前端、鍵盤可操作，適合展示 RNG、RTP 與 game feel 設計。">
+  <meta name="keywords" content="HTML5 博弈遊戲, Casino H5, 老虎機, Slots, Video Poker, Blackjack, Roulette, Baccarat, Plinko, Canvas 遊戲, TypeScript, 開源遊戲, 靜態網站, GEO, SEO">
+  <meta name="author" content="Lucky 777 Casino Hub">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#0b1021">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://vip-4.github.io/casino-hub/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://vip-4.github.io/casino-hub/">
+  <link rel="alternate" hreflang="x-default" href="https://vip-4.github.io/casino-hub/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lucky 777 Casino Hub">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="Lucky 777 Casino Hub — 8 款免費開源 HTML5 博弈遊戲示範">
+  <meta property="og:description" content="將 8 款輕量級博弈遊戲整合於單一靜態首頁：老虎機、影像撲克、21 點、輪盤、百家樂、Plinko、擲硬幣與骰子。純前端、零依賴、鍵盤可操作。">
+  <meta property="og:url" content="https://vip-4.github.io/casino-hub/">
+  <meta property="og:image" content="https://vip-4.github.io/casino-hub/og-image.svg">
+  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Lucky 777 Casino Hub 八款博弈遊戲整合首頁示意圖">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lucky 777 Casino Hub — 8 款免費 HTML5 博弈遊戲示範">
+  <meta name="twitter:description" content="單一靜態頁整合 8 款輕量博弈遊戲，展示 RNG、RTP 與無障礙設計。">
+  <meta name="twitter:image" content="https://vip-4.github.io/casino-hub/og-image.svg">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Lucky 777 Casino Hub","url":"https://vip-4.github.io/casino-hub/","description":"八款輕量級 HTML5 博弈遊戲的靜態示範站。","inLanguage":"zh-Hant"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ItemList","name":"Lucky 777 Casino Hub 遊戲清單","numberOfItems":8,"itemListElement":[{"@type":"ListItem","position":1,"name":"幸運 777 老虎機"},{"@type":"ListItem","position":2,"name":"影像撲克"},{"@type":"ListItem","position":3,"name":"21 點"},{"@type":"ListItem","position":4,"name":"歐式輪盤"},{"@type":"ListItem","position":5,"name":"百家樂"},{"@type":"ListItem","position":6,"name":"Plinko"},{"@type":"ListItem","position":7,"name":"擲硬幣"},{"@type":"ListItem","position":8,"name":"骰子遊戲"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Lucky 777 Casino Hub 是什麼？","acceptedAnswer":{"@type":"Answer","text":"這是一個純前端、零第三方依賴的靜態示範站，將八款輕量級 HTML5 博弈遊戲整合在單一語意化首頁中，用於展示 RNG、RTP、有限狀態機與無障礙設計。"}},{"@type":"Question","name":"需要註冊或下載嗎？","acceptedAnswer":{"@type":"Answer","text":"不需要。所有遊戲直接在瀏覽器執行，免註冊、免下載、無後端、無資料收集。"}},{"@type":"Question","name":"遊戲可以贏得現金嗎？","acceptedAnswer":{"@type":"Answer","text":"不可以。本站僅提供娛樂用的試玩籌碼，不涉及真實金錢，也不提供任何提領或儲值功能。"}},{"@type":"Question","name":"支援鍵盤與手機操作嗎？","acceptedAnswer":{"@type":"Answer","text":"支援。所有控制項皆為原生按鈕與表單元素，具備可見焦點樣式、ARIA 即時播報與 prefers-reduced-motion 支援。"}},{"@type":"Question","name":"_random 與派彩如何實作？","acceptedAnswer":{"@type":"Answer","text":"示範版使用前端加權隨機數與預先定義的賠率表；正式商用架構應將 RNG、RTP 與派彩計算移至伺服器端，前端僅負責表現層。"}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://vip-4.github.io/casino-hub/"}]}
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">777</span>
+        <div>
+          <p class="brand-title">Lucky 777 Casino Hub</p>
+          <p class="brand-sub">八款輕量級 HTML5 博弈遊戲示範</p>
+        </div>
+      </div>
+      <div class="wallet" role="status" aria-live="polite">
+        <span>試玩籌碼</span>
+        <strong id="balance">1,000</strong>
+      </div>
+    </div>
+  </header>
+
+  <nav class="game-nav" aria-label="遊戲選單">
+    <div class="wrap tablist" role="tablist" aria-label="選擇遊戲">
+      <button class="tab is-active" id="tab-slots" role="tab" aria-selected="true" aria-controls="panel-slots" data-game="slots">幸運 777</button>
+      <button class="tab" id="tab-video-poker" role="tab" aria-selected="false" aria-controls="panel-video-poker" data-game="videoPoker" tabindex="-1">影像撲克</button>
+      <button class="tab" id="tab-blackjack" role="tab" aria-selected="false" aria-controls="panel-blackjack" data-game="blackjack" tabindex="-1">21 點</button>
+      <button class="tab" id="tab-roulette" role="tab" aria-selected="false" aria-controls="panel-roulette" data-game="roulette" tabindex="-1">歐式輪盤</button>
+      <button class="tab" id="tab-baccarat" role="tab" aria-selected="false" aria-controls="panel-baccarat" data-game="baccarat" tabindex="-1">百家樂</button>
+      <button class="tab" id="tab-plinko" role="tab" aria-selected="false" aria-controls="panel-plinko" data-game="plinko" tabindex="-1">Plinko</button>
+      <button class="tab" id="tab-coin" role="tab" aria-selected="false" aria-controls="panel-coin" data-game="coin" tabindex="-1">擲硬幣</button>
+      <button class="tab" id="tab-dice" role="tab" aria-selected="false" aria-controls="panel-dice" data-game="dice" tabindex="-1">骰子</button>
+    </div>
+  </nav>
+
+  <div class="wrap controls">
+    <label for="bet-amount">每局下注</label>
+    <input id="bet-amount" type="number" min="1" max="100" step="1" value="10" inputmode="numeric">
+    <button id="reset-balance" class="btn btn-ghost" type="button">重置籌碼</button>
+    <p class="controls-hint">所有遊戲共用試玩籌碼與下注金額；結果僅供娛樂，不涉及真實金錢。</p>
+  </div>
+
+  <main id="main" class="wrap">
+    <section class="facts" aria-labelledby="facts-title">
+      <h2 id="facts-title">Key Facts｜快速摘要</h2>
+      <dl class="facts-grid">
+        <div><dt>遊戲數量</dt><dd>8 款，全部整合於單一靜態首頁</dd></div>
+        <div><dt>技術架構</dt><dd>純 HTML / CSS / JavaScript ES6+，零第三方相依</dd></div>
+        <div><dt>算繪方式</dt><dd>DOM 為主，Plinko 使用 Canvas 2D 與 requestAnimationFrame</dd></div>
+        <div><dt>隨機數</dt><dd>前端加權 RNG；商用應改為伺服器端 RNG 與 RTP</dd></div>
+        <div><dt>無障礙</dt><dd>原生按鈕、ARIA 即時播報、可見焦點、reduced-motion</dd></div>
+        <div><dt>部署方式</dt><dd>靜態託管，無需建置步驟，可直接放至 GitHub Pages</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel is-active" id="panel-slots" role="tabpanel" aria-labelledby="tab-slots">
+      <div class="panel-head">
+        <h2>幸運 777 老虎機</h2>
+        <p>三軸單線老虎機。選定下注後旋轉，三個相同符號依賠率表派彩；兩個櫻桃亦可獲得小獎。</p>
+      </div>
+      <div class="slots-machine">
+        <div class="reels" aria-label="老虎機轉軸">
+          <div class="reel" id="reel-0" aria-label="第一軸"><span>🍒</span></div>
+          <div class="reel" id="reel-1" aria-label="第二軸"><span>7️⃣</span></div>
+          <div class="reel" id="reel-2" aria-label="第三軸"><span>🍋</span></div>
+        </div>
+        <button class="btn btn-primary" id="slots-spin" type="button">旋轉</button>
+        <p class="result" id="slots-result" role="status" aria-live="polite">按下「旋轉」開始。</p>
+      </div>
+      <table class="paytable">
+        <caption>賠率表（以每局下注金額為基礎）</caption>
+        <thead><tr><th scope="col">組合</th><th scope="col">派彩倍數</th></tr></thead>
+        <tbody>
+          <tr><td>三個 7️⃣</td><td>20×</td></tr>
+          <tr><td>三個 💎</td><td>10×</td></tr>
+          <tr><td>三個 🍋</td><td>5×</td></tr>
+          <tr><td>三個 🍒</td><td>3×</td></tr>
+          <tr><td>兩個 🍒</td><td>1×</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel" id="panel-video-poker" role="tabpanel" aria-labelledby="tab-video-poker" hidden>
+      <div class="panel-head">
+        <h2>影像撲克（Jacks or Better）</h2>
+        <p>發出五張牌，點選想保留的牌後換牌。牌型達成 Jacks 或以上即派彩。</p>
+      </div>
+      <div class="cards" id="vp-cards" aria-label="影像撲克手牌"></div>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="vp-deal" type="button">發牌</button>
+        <button class="btn" id="vp-draw" type="button" disabled>換牌</button>
+      </div>
+      <p class="result" id="vp-result" role="status" aria-live="polite">按下「發牌」開始。</p>
+      <table class="paytable">
+        <caption>賠率表（每注 1 籌碼）</caption>
+        <thead><tr><th scope="col">牌型</th><th scope="col">派彩</th></tr></thead>
+        <tbody>
+          <tr><td>同花大順</td><td>250×</td></tr>
+          <tr><td>同花順</td><td>50×</td></tr>
+          <tr><td>四條</td><td>25×</td></tr>
+          <tr><td>葫蘆</td><td>9×</td></tr>
+          <tr><td>同花</td><td>6×</td></tr>
+          <tr><td>順子</td><td>4×</td></tr>
+          <tr><td>三條</td><td>3×</td></tr>
+          <tr><td>兩對</td><td>2×</td></tr>
+          <tr><td>Jacks 或更好</td><td>1×</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel" id="panel-blackjack" role="tabpanel" aria-labelledby="tab-blackjack" hidden>
+      <div class="panel-head">
+        <h2>21 點 Blackjack</h2>
+        <p>目標是讓手牌點數接近 21 而不超過。莊家補牌至 17 點，Blackjack 以 3:2 派彩。</p>
+      </div>
+      <div class="table-area">
+        <div class="hand"><h3>莊家</h3><div class="cards" id="bj-dealer" aria-label="莊家手牌"></div></div>
+        <div class="hand"><h3>玩家</h3><div class="cards" id="bj-player" aria-label="玩家手牌"></div></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" id="bj-deal" type="button">發牌</button>
+        <button class="btn" id="bj-hit" type="button" disabled>要牌</button>
+        <button class="btn" id="bj-stand" type="button" disabled>停牌</button>
+        <button class="btn" id="bj-double" type="button" disabled>加倍</button>
+      </div>
+      <p class="result" id="bj-result" role="status" aria-live="polite">按下「發牌」開始。</p>
+    </section>
+
+    <section class="panel" id="panel-roulette" role="tabpanel" aria-labelledby="tab-roulette" hidden>
+      <div class="panel-head">
+        <h2>歐式輪盤</h2>
+        <p>37 個號碼（0–36）。可下注單一號碼、紅黑、單雙或大小；單一號碼派彩 35:1。</p>
+      </div>
+      <div class="roulette-board">
+        <div class="wheel" id="ro-wheel" aria-label="輪盤結果"><span>—</span></div>
+        <div class="bet-form">
+          <label for="ro-type">下注類型</label>
+          <select id="ro-type">
+            <option value="number">單一號碼（35:1）</option>
+            <option value="color">紅／黑（1:1）</option>
+            <option value="parity">單／雙（1:1）</option>
+            <option value="half">小／大（1:1）</option>
+          </select>
+          <label for="ro-pick">選擇</label>
+          <select id="ro-pick"></select>
+          <button class="btn btn-primary" id="ro-spin" type="button">旋轉</button>
+        </div>
+      </div>
+      <p class="result" id="ro-result" role="status" aria-live="polite">選擇下注類型後旋轉。</p>
+    </section>
+
+    <section class="panel" id="panel-baccarat" role="tabpanel" aria-labelledby="tab-baccarat" hidden>
+      <div class="panel-head">
+        <h2>百家樂 Baccarat</h2>
+        <p>點數以個位數計算（10/J/Q/K 為 0）。可下注 Player、Banker 或 Tie；Banker 抽水 5%。</p>
+      </div>
+      <div class="table-area">
+        <div class="hand"><h3>Player</h3><div class="cards" id="ba-player" aria-label="Player 手牌"></div><p id="ba-player-score">—</p></div>
+        <div class="hand"><h3>Banker</h3><div class="cards" id="ba-banker" aria-label="Banker 手牌"></div><p id="ba-banker-score">—</p></div>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-primary" data-ba-bet="player" type="button">下注 Player</button>
+        <button class="btn" data-ba-bet="banker" type="button">下注 Banker</button>
+        <button class="btn" data-ba-bet="tie" type="button">下注 Tie</button>
+      </div>
+      <p class="result" id="ba-result" role="status" aria-live="polite">選擇下注標的。</p>
+    </section>
+
+    <section class="panel" id="panel-plinko" role="tabpanel" aria-labelledby="tab-plinko" hidden>
+      <div class="panel-head">
+        <h2>Plinko</h2>
+        <p>小球通過釘陣後落入帶有倍數的卡槽。倍數越高，落點機率越低。</p>
+      </div>
+      <div class="plinko-wrap">
+        <canvas id="plinko-canvas" width="480" height="520" aria-label="Plinko 釘陣與倍數卡槽" role="img"></canvas>
+        <button class="btn btn-primary" id="plinko-drop" type="button">投放小球</button>
+      </div>
+      <p class="result" id="plinko-result" role="status" aria-live="polite">按下「投放小球」開始。</p>
+    </section>
+
+    <section class="panel" id="panel-coin" role="tabpanel" aria-labelledby="tab-coin" hidden>
+      <div class="panel-head">
+        <h2>擲硬幣</h2>
+        <p>選擇正面或反面，猜中即 1:1 派彩。使用前端隨機數產生結果。</p>
+      </div>
+      <div class="coin-stage"><span id="coin-face" aria-hidden="true">🪙</span></div>
+      <div class="btn-row">
+        <button class="btn btn-primary" data-coin="heads" type="button">猜正面</button>
+        <button class="btn" data-coin="tails" type="button">猜反面</button>
+      </div>
+      <p class="result" id="coin-result" role="status" aria-live="polite">選擇正面或反面。</p>
+    </section>
+
+    <section class="panel" id="panel-dice" role="tabpanel" aria-labelledby="tab-dice" hidden>
+      <div class="panel-head">
+        <h2>骰子遊戲</h2>
+        <p>兩顆六面骰，可下注大（11–12）、小（2–6）或指定點數（7）。指定點數派彩 5:1。</p>
+      </div>
+      <div class="dice-stage"><span id="dice-a" aria-hidden="true">⚀</span><span id="dice-b" aria-hidden="true">⚀</span></div>
+      <div class="bet-form">
+        <label for="dice-type">下注標的</label>
+        <select id="dice-type">
+          <option value="small">小（2–6，1:1）</option>
+          <option value="big">大（11–12，1:1）</option>
+          <option value="seven">指定 7（5:1）</option>
+        </select>
+        <button class="btn btn-primary" id="dice-roll" type="button">擲骰</button>
+      </div>
+      <p class="result" id="dice-result" role="status" aria-live="polite">選擇標的後擲骰。</p>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">常見問題 FAQ</h2>
+      <details><summary>Lucky 777 Casino Hub 是什麼？</summary><p>這是一個純前端、零第三方依賴的靜態示範站，將八款輕量級 HTML5 博弈遊戲整合在單一語意化首頁中，用於展示 RNG、RTP、有限狀態機與無障礙設計。</p></details>
+      <details><summary>需要註冊或下載嗎？</summary><p>不需要。所有遊戲直接在瀏覽器執行，免註冊、免下載、無後端、無資料收集。</p></details>
+      <details><summary>遊戲可以贏得現金嗎？</summary><p>不可以。本站僅提供娛樂用的試玩籌碼，不涉及真實金錢，也不提供任何提領或儲值功能。</p></details>
+      <details><summary>支援鍵盤與手機操作嗎？</summary><p>支援。所有控制項皆為原生按鈕與表單元素，具備可見焦點樣式、ARIA 即時播報與 prefers-reduced-motion 支援。</p></details>
+      <details><summary>隨機數與派彩如何實作？</summary><p>示範版使用前端加權隨機數與預先定義的賠率表；正式商用架構應將 RNG、RTP 與派彩計算移至伺服器端，前端僅負責表現層。</p></details>
+    </section>
+
+    <section class="tech" aria-labelledby="tech-title">
+      <h2 id="tech-title">技術與架構說明</h2>
+      <p>本站採用單頁式靜態架構：所有遊戲共存於一份 DOM，透過 <code>role="tablist"</code> 切換 <code>role="tabpanel"</code>，爬蟲可讀取完整文字內容。JavaScript 以 IIFE 封裝，分為共用工具層（RNG、籌碼、播報）與各遊戲模組；Plinko 使用 Canvas 2D 搭配 <code>requestAnimationFrame</code>，其餘遊戲以 DOM 操作完成。</p>
+      <p>博弈遊戲的有限狀態機典型流程為 <code>IDLE → SPINNING → EVALUATING → IDLE</code>；本示範在各模組內實作相同概念，避免重複下注。行動端需特別處理 iOS Safari 首次互動音訊解鎖、觸控延遲與 WebGL/Canvas 情境遺失；本站未使用音訊或 WebGL，因此降低相關風險。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>本站為技術示範與娛樂用途，不涉及真實金錢博弈。試玩籌碼無任何價值。</p>
+      <p>Lucky 777 Casino Hub · 純靜態 · 零第三方依賴 · 支援鍵盤與螢幕閱讀器</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

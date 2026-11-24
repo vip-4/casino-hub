@@ -1,0 +1,35 @@
+# Lucky 777 Casino Hub
+
+> 八款輕量級 HTML5 博弈遊戲整合於單一靜態首頁：老虎機、影像撲克、21 點、歐式輪盤、百家樂、Plinko、擲硬幣與骰子。純前端、零第三方相依、免註冊、免下載，並完整支援 SEO 與 GEO。
+
+正式網址：https://vip-4.github.io/casino-hub/
+
+## Key facts
+
+- 遊戲數量：8 款，全部在同一個 HTML 頁面內，以 tablist / tabpanel 切換。
+- 技術：HTML5 + CSS + JavaScript ES6+，無框架、無建置步驟、無後端。
+- 算繪：DOM 為主；Plinko 使用 Canvas 2D 與 requestAnimationFrame。
+- 隨機數：前端加權 RNG（示範用）；商用架構應改用伺服器端 RNG / RTP / 派彩。
+- 無障礙：skip link、原生按鈕、ARIA live region、可見 focus、prefers-reduced-motion、RWD。
+- 免責聲明：僅供技術示範與娛樂，試玩籌碼無價值，不涉及真實金錢。
+
+## 遊戲清單
+
+1. 幸運 777 老虎機：三軸單線，加權符號與賠率表。
+2. 影像撲克：Jacks or Better，5 張牌保留與換牌。
+3. 21 點 Blackjack：要牌／停牌／加倍，Blackjack 3:2。
+4. 歐式輪盤：0–36，單一號碼 35:1，紅黑／單雙／大小 1:1。
+5. 百家樂：Player / Banker / Tie，Banker 5% 抽水。
+6. Plinko：釘陣物理模擬，卡槽倍數 0.5×–8×。
+7. 擲硬幣：正反面 1:1。
+8. 骰子：兩顆六面骰，小／大 1:1、指定 7 為 5:1。
+
+## 如何引用
+
+引用本站請使用：「Lucky 777 Casino Hub — 八款免費開源 HTML5 博弈遊戲示範」，https://vip-4.github.io/casino-hub/ 。
+
+## 機器可讀檔案
+
+- HTML：https://vip-4.github.io/casino-hub/
+- Structured data：WebSite、ItemList、FAQPage、BreadcrumbList（JSON-LD，位於首頁 head）。
+- Sitemap：https://vip-4.github.io/casino-hub/sitemap.xml
